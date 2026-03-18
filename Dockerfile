@@ -13,6 +13,9 @@ WORKDIR /var/www
 
 COPY . .
 
+RUN npm install
+RUN npm run build
+
 RUN composer install --no-dev --optimize-autoloader
 
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
