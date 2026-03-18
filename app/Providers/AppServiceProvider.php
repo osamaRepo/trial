@@ -24,10 +24,7 @@ class AppServiceProvider extends ServiceProvider
                 \Illuminate\Support\Facades\URL::forceScheme('https');
             }
 
-    // Load API routes
-        Route::middleware('api')
-            ->prefix('api') // optional, all routes will start with /api
-            ->group(base_path('routes/api.php'));
+      
 
     }
 }
