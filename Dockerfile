@@ -13,6 +13,8 @@ WORKDIR /var/www
 
 COPY . .
 
+COPY .env.docker .env
+
 RUN npm install
 RUN npm run build
 
