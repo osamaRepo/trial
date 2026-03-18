@@ -12,7 +12,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        Route::middleware('api')
+            ->prefix('api') 
+            ->group(base_path('routes/api.php'));
+
     }
 
     /**
@@ -23,8 +26,6 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('production')) {
                 \Illuminate\Support\Facades\URL::forceScheme('https');
             }
-
-      
 
     }
 }
