@@ -3,12 +3,13 @@ import DashboardLayout from '../layouts/DashboardLayout.vue'
 import { ref, onMounted } from 'vue'
 
 const attendances = ref([])
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const fetchHistory = async () => {
   const token = localStorage.getItem('token')
   if (!token) return
   try {
-    const res = await fetch('http://127.0.0.1:8000/api/attendance/history', {
+    const res = await fetch(`${apiUrl}/api/attendance/history`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

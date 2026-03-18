@@ -8,11 +8,13 @@ const error = ref('')
 const loading = ref(false)
 const router = useRouter()
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 const login = async () => {
   error.value = ''
   loading.value = true
   try {
-    const res = await fetch('http://localhost:8000/api/login', {
+    const res = await fetch(`${apiUrl}/api/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

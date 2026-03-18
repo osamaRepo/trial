@@ -6,12 +6,14 @@ const message = ref('')
 const status = ref('loading')
 const loading = ref(false)
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 const getStatus = async () => {
   const token = localStorage.getItem('token')
   if (!token) return
 
   try {
-    const res = await fetch('http://127.0.0.1:8000/api/attendance/history', {
+    const res = await fetch(`${apiUrl}/api/attendance/history`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -40,7 +42,7 @@ const checkInOut = () => {
 
   navigator.geolocation.getCurrentPosition(async (position) => {
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/attendance/check', {
+      const res = await fetch(`${apiUrl}/api/attendance/check`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

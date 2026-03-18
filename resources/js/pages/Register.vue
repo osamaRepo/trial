@@ -10,11 +10,13 @@ const password_confirmation = ref('')
 const error = ref('')
 const loading = ref(false)
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 const register = async () => {
   error.value = ''
   loading.value = true
   try {
-    const res = await fetch('http://localhost:8000/api/register', {
+    const res = await fetch(`${apiUrl}/api/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

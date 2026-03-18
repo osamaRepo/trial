@@ -7,11 +7,13 @@ const currentDate = ref(new Date())
 const calendarData = ref({})
 const tooltip = ref('Hover a date for details')
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 const fetchCalendar = async (month, year) => {
   const token = localStorage.getItem('token')
   if (!token) return {}
   try {
-    const res = await fetch('http://127.0.0.1:8000/api/attendance/calendar', {
+    const res = await fetch(`${apiUrl}/api/attendance/calendar`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
