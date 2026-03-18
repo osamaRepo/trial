@@ -8,8 +8,8 @@ const error = ref('')
 const loading = ref(false)
 const router = useRouter()
 
-const apiUrl = import.meta.env.VITE_APP_API_URL;
-// const apiUrl = 'https://trial-production-147b.up.railway.app'
+// const apiUrl = import.meta.env.VITE_APP_API_URL;
+const apiUrl = 'https://trial-production-147b.up.railway.app'
 
 
 const login = async () => {

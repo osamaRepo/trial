@@ -7,8 +7,8 @@ const currentDate = ref(new Date())
 const calendarData = ref({})
 const tooltip = ref('Hover a date for details')
 
-const apiUrl = import.meta.env.VITE_APP_API_URL;
-// const apiUrl = 'https://trial-production-147b.up.railway.app'
+// const apiUrl = import.meta.env.VITE_APP_API_URL;
+const apiUrl = 'https://trial-production-147b.up.railway.app'
 
 const fetchCalendar = async (month, year) => {
   const token = localStorage.getItem('token')

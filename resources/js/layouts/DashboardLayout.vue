@@ -237,8 +237,8 @@ import { computed } from 'vue'
 
 const router = useRouter()
 const route = useRoute()
-const apiUrl = import.meta.env.VITE_APP_API_URL;
-// const apiUrl = 'https://trial-production-147b.up.railway.app'
+// const apiUrl = import.meta.env.VITE_APP_API_URL;
+const apiUrl = 'https://trial-production-147b.up.railway.app'
 
 
 const currentRoute = computed(() => route.path)
