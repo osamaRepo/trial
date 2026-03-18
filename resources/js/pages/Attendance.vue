@@ -6,7 +6,7 @@ const message = ref('')
 const status = ref('loading')
 const loading = ref(false)
 
-const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
 
 const getStatus = async () => {
   const token = localStorage.getItem('token')

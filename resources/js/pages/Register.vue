@@ -10,7 +10,7 @@ const password_confirmation = ref('')
 const error = ref('')
 const loading = ref(false)
 
-const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
 
 const register = async () => {
   error.value = ''

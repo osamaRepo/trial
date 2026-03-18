@@ -237,6 +237,8 @@ import { computed } from 'vue'
 
 const router = useRouter()
 const route = useRoute()
+const apiUrl = import.meta.env.VITE_APP_API_URL;
+
 
 const currentRoute = computed(() => route.path)
 
@@ -251,7 +253,7 @@ const logout = async () => {
   try {
     const token = localStorage.getItem('token')
     if (!token) return router.push('/')
-    await fetch('http://127.0.0.1:8000/api/logout', {
+    await fetch(`${apiUrl}/api/logout`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

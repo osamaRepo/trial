@@ -3,7 +3,7 @@ import DashboardLayout from '../layouts/DashboardLayout.vue'
 import { ref, onMounted } from 'vue'
 
 const attendances = ref([])
-const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl = import.meta.env.VITE_APP_API_URL;
 
 const fetchHistory = async () => {
   const token = localStorage.getItem('token')

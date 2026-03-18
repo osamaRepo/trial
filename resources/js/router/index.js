@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Login from '../pages/Login.vue'
 import Register from '../pages/Register.vue'
-import Attendance from '../pages/Attendamce.vue'
+import Attendance from '../pages/Attendance.vue'
 import History from '../pages/History.vue'
 import Calender from '../pages/Calender.vue'
 
