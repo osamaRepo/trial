@@ -14,8 +14,9 @@
 /bootstrap/cache
 
 # Docker env files
-.env.docker
+# .env.docker
 .env.xampp
+.env.example
 
 # OS files
 .DS_Store
@@ -31,6 +32,7 @@ Thumbs.db
 
 # Composer
 composer.phar
+
 
 # NPM
 npm-debug.log
